@@ -1,9 +1,6 @@
 const express = require("express");
 const app = express();
 const port = process.env.PORT || 3001;
-app.listen(PORT, "0.0.0.0", () => {
-  console.log(`Server running on port ${PORT}`);
-});
 const mongoose = require("mongoose");
 app.use(express.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
@@ -40,7 +37,7 @@ mongoose
     process.env.MONGODB_URL
   )
   .then(() => {
-    app.listen(port, () => {
+    app.listen(port,"0.0.0.0", () => {
       console.log(`http://localhost:${port}/`);
     });
   })
