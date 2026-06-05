@@ -41,7 +41,9 @@
         <nav class="px-2 mt-4 d-flex flex-wrap justify-content-between" aria-label="breadcrumb">
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="/home">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Ali Hassan</li>
+            <li class="breadcrumb-item active" aria-current="page">
+              <%= obj.firstName %> <%= obj.lastName %>
+            </li>
           </ol>
 
 
@@ -61,8 +63,8 @@
           <div class="col-md-6">
             <label for="inputfirstName4" class="form-label">First Name:</label>
             <input
-              value="<%= obj.fireName %>"
-              name="fireName"
+              value="<%= obj.firstName %>"
+              name="firstName"
               type="text"
               class="form-control"
               id="inputfirstName4"

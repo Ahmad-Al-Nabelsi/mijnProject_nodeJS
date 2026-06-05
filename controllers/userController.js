@@ -30,7 +30,7 @@ const user_post = (req, res) => {
 
   AuthUser.updateOne({ _id: decoded.id }, { $push: 
     { customerInfo: {
-      fireName: req.body.fireName,
+      firstName: req.body.firstName,
       lastName: req.body.lastName,
       email: req.body.email,
       phoneNumber: req.body.phoneNumber,
@@ -58,7 +58,7 @@ const user_put = (req, res) => {
   console.log(req.body)
   AuthUser.updateOne(
     { "customerInfo._id": req.params.id },
-    { "customerInfo.$.fireName": req.body.fireName,
+    { "customerInfo.$.firstName": req.body.firstName,
     "customerInfo.$.lastName": req.body.lastName,
     "customerInfo.$.email": req.body.email,
     "customerInfo.$.phoneNumber": req.body.phoneNumber,
@@ -171,7 +171,7 @@ const user_search_post = (req, res) => {
       console.log(result.customerInfo)
       const searchCustomers = result.customerInfo.filter((item) => {
         return (
-          item.fireName.includes(searchText) ||
+          item.firstName.includes(searchText) ||
           item.lastName.includes(searchText)
         );
       });

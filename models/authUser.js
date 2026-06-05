@@ -10,7 +10,7 @@ const authUserSchema = new Schema({
   password: String,
   customerInfo: [
     {
-      fireName: String,
+      firstName: String,
       lastName: String,
       email: String,
       phoneNumber: String,
