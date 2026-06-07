@@ -83,7 +83,7 @@ const post_login = async (req, res) => {
 
 
 const post_profileIme =   (req, res, next) => {
-  cloudinary.uploader.upload(req.file.path, {folder: "x-system/profile-imgs"}  , async (error, result) => {
+  cloudinary.uploader.upload(req.file.path, {folder: "Customer-Management-System/profile-imgs"}  , async (error, result) => {
     if (result) {
       var decoded = jwt.verify(req.cookies.jwt, process.env.JWT_SECRET_KEY);
 

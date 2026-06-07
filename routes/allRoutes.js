@@ -14,10 +14,7 @@ const multer = require("multer");
 const upload = multer({ storage: multer.diskStorage({}) });
 
 // LEVEL 3
-router.post(
-  "/update-profile",
-  upload.single("avatar"),
-  authController.post_profileIme
+router.post("/update-profile", upload.single('avatar'), authController.post_profileIme
 );
 
 // Level 2
