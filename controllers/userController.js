@@ -78,32 +78,6 @@ const user_put = (req, res) => {
 };
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // done
 //   /edit/:id
 const user_delete = (req, res) => {
